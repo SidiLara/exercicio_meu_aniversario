@@ -1,0 +1,67 @@
+@use 'variables';
+
+.event {
+    padding: 80px 0;
+
+    &--sobre {
+        background-image: linear-gradient(variables.$cor1, variables.$cor2);
+    }
+
+    &--event {
+        background-image: linear-gradient(variables.$cor2, variables.$cor3);
+    }
+
+    &--confirm {
+        background-image: linear-gradient(variables.$cor3, variables.$cor1);
+    }
+
+    &--image-left {
+        .container {
+            flex-direction: row-reverse;
+        }
+    }
+
+    .container {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+
+    }
+
+    &__image {
+        max-width: 360px;
+        width: 100%;
+        height: auto;
+    }
+
+    &__details {
+        &__title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        &__description {
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+
+    @media(max-width: 640px) {
+        .container {
+            display: block;
+        }
+
+        &__image {
+            display: flex;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        &__details {
+            margin-right: 0;
+            margin-bottom: 16px;
+
+        }
+    }
+}
